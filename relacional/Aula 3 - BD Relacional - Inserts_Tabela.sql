@@ -114,3 +114,11 @@ insert into item_pedido values (0009,0019,120);
 
 select * from item_pedido
 
+select * from cliente;
+
+select * from pedido;
+
+select * from produto;
+
+select * from vendedor;
+

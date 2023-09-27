@@ -29,7 +29,7 @@ select * from funcionario;
 
 /* parte 4 */
 insert into setor(nome_setor)
-values ('AdministraÁ„o');
+values ('Administra√ß√£o');
 
 insert into setor(nome_setor)
 values ('Financeiro');
@@ -41,7 +41,7 @@ insert into setor(nome_setor)
 values ('Diretoria');
 
 insert into setor(nome_setor)
-values ('ProduÁ„o');
+values ('Produ√ß√£o');
 /* fim parte 4 */
 
 /* parte 5 */
@@ -64,7 +64,28 @@ insert into funcionario(primeiro_nome, email, telefone, data_admissao, salario, 
 values ('Felipe', 'felipe1405email@email.com', '00 99991-1341', '12/09/2022', 900, 2)
 
 insert into funcionario(primeiro_nome, ultimo_nome, email, telefone, data_admissao, salario, cod_setor)
-values ('Gabriela', 'GonÁalves', 'gabigonÁa123@email.com', '00 99009-0009', '08/09/2018', 850, 1)
+values ('Gabriela', 'Gon√ßalves', 'gabigon√ßa123@email.com', '00 99009-0009', '08/09/2018', 850, 1)
 
 insert into funcionario(primeiro_nome, email, telefone, data_admissao, salario, cod_setor)
 values ('Henrique', 'henryhehehemail@email.com', '00 99778-0987', '30/03/2020', 900, 2)
+
+/* fim parte 5 */
+
+/*adapta√ß√µes
+
+update funcionario set ultimo_nome='Elise' where nrmatricula=5;
+update funcionario set ultimo_nome='Freitas' where nrmatricula=6;
+update funcionario set ultimo_nome='Hobbs' where nrmatricula=8;
+update funcionario set telefone='00 90913-0472' where nrmatricula=5;
+
+alter table funcionario alter column ultimo_nome varchar(50) not null;
+alter table funcionario alter column email varchar(200) not null;
+alter table funcionario alter column telefone varchar(20) not null;
+ 
+ fim adapta√ß√µes */
+
+/* parte 6 */
+select distinct cod_setor from funcionario;
+
+select (ultimo_nome + ', ' + convert(varchar, cod_setor)) as 'Empregado e Setor' from funcionario; 
+
