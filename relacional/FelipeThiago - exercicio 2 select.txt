@@ -1,3 +1,28 @@
+/*
+use fbd;
+
+create table pessoa(
+id_pessoa integer primary key,
+nome varchar(20),
+cpf varchar(14)
+);
+
+create table pessoa_fisica(
+id_pessoa integer primary key,
+nome varchar(20),
+cpf varchar(14)
+);
+
+insert into pessoa values(1, 'Pedro Cabral', '12345678991');
+
+insert into pessoa_fisica select id_pessoa, nome, cpf from pessoa;
+
+select * from pessoa;
+
+select * from pessoa_fisica;
+*/
+
+
 /* exercício 2 para entrega - Felipe Thiago da Silva*/
 select * from Funcionario;
 
@@ -51,3 +76,15 @@ select * from Funcionario
 where salario > 2300 and cod_setor = 3; /* opcao 1 (pedido da tarefa) */ 
 select * from Funcionario
 where salario > 1000 and cod_setor = 3; /* opcao 2 (adaptado) */ 
+
+select GETDATE();
+
+select DATEADD(day, 3, getdate());
+
+select DATENAME(month, getdate());
+
+select CONVERT(char, getdate(), 103);
+
+select DATENAME(month, (dateadd(month, 3, getdate())));
+
+select DATEPART(month, getdate());
